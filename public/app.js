@@ -34,5 +34,9 @@ app.controller('Controller', ['$http', function($http){
       console.log('we not');
     }
   }
+  this.logout = function() {
+    localStorage.clear('token');
+    location.reload();
+  }
   this.checkLogin();
 }]);
