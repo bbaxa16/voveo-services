@@ -10,7 +10,9 @@ nav {
   padding: 2%;
   border-radius: 2%;
 }
-
+input, select {
+  margin: 1%;
+}
 #login-form {
   justify-content: center;
 }

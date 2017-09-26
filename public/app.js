@@ -22,15 +22,19 @@ app.controller('Controller', ['$http', function($http){
         localStorage.setItem('logged', JSON.stringify(true));
         console.log('successful login');
         this.checkLogin();
+        this.loginForm = false;
+        this.unauthorized = false;
       }
     }.bind(this));
   }
   this.checkLogin = function() {
     if (localStorage.logged === "true"){
       controller.logged = true;
+      controller.loginForm = false;
       console.log('we logged in foo');
     } else {
       controller.logged = false;
+      controller.loginForm = true;
       console.log('we not');
     }
   }
