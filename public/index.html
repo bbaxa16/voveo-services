@@ -9,8 +9,27 @@
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.6/angular.min.js" charset="utf-8"></script>
     <script src="./app.js" charset="utf-8"></script>
   </head>
+
+  <!-- the real ish -->
   <body ng-controller='Controller as ctrl'>
-    <h1>hi</h1>
-    <h5>{{ctrl.message}}</h5>
+    <nav class='nav navbar-light bg-faded" navbar-fixed-top'>
+      <a class='navbar-brand' href="#">
+        <img class='d-inline-blick' id='brand' src="./voveo_sm.png" alt="">
+    </a>
+    </nav>
+
+    <div class="container text-center" id='login'>
+      <form class="form-group row" id='login-form' ng-submit='ctrl.login(userPass)'>
+        <input class='form-control col-8' type="text" ng-model='userPass.username'  placeholder="username">
+        <input class='form-control col-8' type="password" ng-model='userPass.password' placeholder="password"></br>
+        </br>
+        <button type="submit" class='btn btn-primary'>login</button>
+      </form>
+    </div>
+
+
+
+
+
   </body>
 </html>

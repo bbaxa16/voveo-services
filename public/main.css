@@ -1,1 +1,16 @@
+nav {
+  background: lightgrey;
+}
+#brand {
+  width: 5%;
+}
 
+#login {
+  background: #828081;
+  padding: 2%;
+  border-radius: 2%;
+}
+
+#login-form {
+  justify-content: center;
+}
