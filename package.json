@@ -1,0 +1,23 @@
+{
+  "name": "voveo-services",
+  "version": "1.0.0",
+  "description": "hi",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bbaxa16/voveo-services.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bbaxa16/voveo-services/issues"
+  },
+  "homepage": "https://github.com/bbaxa16/voveo-services#readme",
+  "dependencies": {
+    "express": "^4.15.5"
+  }
+}
