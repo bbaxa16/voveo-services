@@ -1,12 +1,14 @@
 <!DOCTYPE html>
-<html>
+<html ng-app='voveo-services'>
   <head>
     <meta charset="utf-8">
     <title></title>
     <link rel="stylesheet" href="./main.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.6/angular.min.js" charset="utf-8"></script>
     <script src="./app.js" charset="utf-8"></script>
   </head>
-  <body>
+  <body ng-controller='Controller as ctrl'>
     <h1>hi</h1>
+    <h5>{{ctrl.message}}</h5>
   </body>
 </html>
