@@ -1,7 +1,7 @@
 # voveo-services
 
 
-LIVE SITE: http://voveo.herokuapp.com/
+LIVE SITE: http://voveo-services.herokuapp.com/
 
 # purpose
 
@@ -13,7 +13,7 @@ tech used: HTML, CSS, JavaScript, SQL, Rails, Node.js, Express, AngularJS
 
 voveo-services is a single page application powered by Rails and AngularJS. vs acts as a GUI for the data being collected through the voveo-api.
 
-- API: https://developers.google.com/civic-information/
+- API: http://voveo-api.herokuapp.com/
 
 
 # user stories
