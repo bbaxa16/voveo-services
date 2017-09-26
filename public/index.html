@@ -12,15 +12,24 @@
 
   <!-- the real ish -->
   <body ng-controller='Controller as ctrl'>
+
+    <!-- navbar -->
+
     <nav class='nav navbar-light bg-faded" navbar-fixed-top'>
       <a class='navbar-brand' href="#">
         <img class='d-inline-blick' id='brand' src="./voveo_sm.png" alt="">
     </a>
     <button class="btn btn-danger" id='nav-btn' ng-if='ctrl.logged' ng-click='ctrl.logout()'>Logout</button>
     </nav>
-    <header class='text-center'>
+
+    <!-- header -->
+
+    <header class='text-center' ng-if='!ctrl.logged'>
       <h1>Welcome to voveo-services</h1>
     </header>
+
+    <!-- login form -->
+
     <div class="container text-center" id='login' ng-if='ctrl.loginForm'>
       <form class="form-group row" id='login-form' ng-submit='ctrl.login(userPass)'>
         <input class='form-control col-8' type="text" ng-model='userPass.username'  placeholder="username">
@@ -31,9 +40,28 @@
       <div ng-if='ctrl.unauthorized'class="alert alert-danger" id='nav-form' role="alert">{{ctrl.error}}</div>
     </div>
 
+    <!-- data table -->
 
-
-
+    <div class="container text-center" ng-if='ctrl.logged'>
+      <table class='table table-striped'>
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>city</th>
+            <th>state</th>
+            <th>zip</th>
+          </tr>
+        </thead>
+        <tbody ng-repeat='datum in ctrl.data'>
+          <tr>
+            <th scope="row">{{datum.id}}</th>
+            <td>{{datum.city}}</td>
+            <td>{{datum.state}}</td>
+            <td>{{datum.zip}}</td>
+            <hr>
+          </tr>
+        </tbody>
+      </table>
 
   </body>
 </html>

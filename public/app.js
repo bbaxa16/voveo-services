@@ -17,10 +17,12 @@ app.controller('Controller', ['$http', function($http){
         this.unauthorized = true;
       }
       else {
+        console.log(response);
         this.user = response.data.user;
         localStorage.setItem('token', JSON.stringify(response.data.token));
         localStorage.setItem('logged', JSON.stringify(true));
         console.log('successful login');
+        localStorage.setItem('id', JSON.stringify(response.data.user.id))
         this.checkLogin();
         this.loginForm = false;
         this.unauthorized = false;
@@ -31,13 +33,22 @@ app.controller('Controller', ['$http', function($http){
     if (localStorage.logged === "true"){
       controller.logged = true;
       controller.loginForm = false;
-      console.log('we logged in foo');
+      controller.show(localStorage.id);
     } else {
       controller.logged = false;
       controller.loginForm = true;
-      console.log('we not');
     }
   }
+  this.show = function(id){
+      $http({
+        url: this.url + '/users/' + id,
+        method: 'GET'
+      }).then(function(response){
+        console.log(response);
+        this.data = response.data.data
+        this.username = response.data.username
+      }.bind(this));
+    }
   this.logout = function() {
     localStorage.clear('token');
     location.reload();
