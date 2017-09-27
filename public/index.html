@@ -19,7 +19,11 @@
       <a class='navbar-brand' href="#">
         <img class='d-inline-blick' id='brand' src="./voveo_sm.png" alt="">
     </a>
-    <button class="btn btn-danger" id='nav-btn' ng-if='ctrl.logged' ng-click='ctrl.logout()'>Logout</button>
+    <ul class="navbar navbar-nav navbar-right" style="float: right">
+      <li style='list-style-type: none'>
+        <button class="btn btn-danger" id='nav-btn' ng-if='ctrl.logged' ng-click='ctrl.logout()'>Logout</button></li>
+    </ul>
+
     </nav>
 
     <!-- header -->
