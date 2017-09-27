@@ -4,7 +4,7 @@ const app = angular.module('voveo-services', []);
 app.controller('Controller', ['$http', function($http){
   const controller = this;
   this.message = 'poop';
-  this.url = 'http://voveo-api.herokuapp.com/';
+  this.url = 'http://voveo-api.herokuapp.com';
   this.login = function(userPass){
     $http({
       method: 'POST',
